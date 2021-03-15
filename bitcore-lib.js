@@ -10756,7 +10756,6 @@ Transaction.prototype.hasWitnesses = function() {
 
 Transaction.prototype.toBufferWriter = function(writer, noWitness) {
   writer.writeInt32LE(this.version);
-  writer.writeUInt32LE(this.nTime);
 
   var hasWitnesses = this.hasWitnesses();
 
@@ -10800,8 +10799,6 @@ Transaction.prototype.fromBufferReader = function(reader) {
 
   this.version = reader.readUInt32LE();
 
-  // Stratis adds nTime to the transaction
-  this.nTime = reader.readUInt32LE();
   var sizeTxIns = reader.readVarintNum();
 
   // check for segwit
@@ -10852,7 +10849,6 @@ Transaction.prototype.toObject = Transaction.prototype.toJSON = function toObjec
   var obj = {
     hash: this.hash,
     version: this.version,
-    nTime: this.nTime,
     inputs: inputs,
     outputs: outputs,
     nLockTime: this.nLockTime
@@ -10913,7 +10909,6 @@ Transaction.prototype.fromObject = function fromObject(arg, opts) {
   }
   this.nLockTime = transaction.nLockTime;
   this.version = transaction.version;
-  this.nTime = transaction.nTime;
   this._checkConsistency(arg);
   return this;
 };
