@@ -13,7 +13,7 @@ Bitcoin is a powerful new peer-to-peer platform for the next generation of finan
 ## Get Started
 
 ```sh
-npm install bitcore-lib
+npm install bitcore-lib 
 ```
 
 ```sh
