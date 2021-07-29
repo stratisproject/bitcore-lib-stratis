@@ -1,11 +1,10 @@
 {
-  "name": "bitcore-lib",
-  "version": "8.9.0",
-  "description": "A pure and powerful JavaScript Bitcoin library.",
-  "author": "BitPay <dev@bitpay.com>",
+  "name": "bitcore-lib-stratis",
+  "version": "8.25.7",
+  "description": "A JavaScript library for Stratis networks Strax and Cirrus.",
+  "author": "Stratis <stratisplatform.com>",
   "main": "index.js",
   "scripts": {
-    "lint": "gulp lint",
     "test": "gulp test",
     "test:ci": "npm run test",
     "coverage": "gulp coverage",
@@ -30,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore/tree/master/packages/bitcore-lib"
+    "url": "https://github.com/stratisproject/bitcore-strax/tree/master/packages/bitcore-lib-stratis"
   },
   "browser": {
     "request": "browser-request"
@@ -40,15 +39,15 @@
     "bn.js": "=4.11.8",
     "bs58": "^4.0.1",
     "buffer-compare": "=1.1.1",
-    "elliptic": "=6.4.0",
+    "elliptic": "^6.5.3",
     "inherits": "=2.0.1",
-    "lodash": "=4.17.15"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
-    "bitcore-build": "^8.9.0",
+    "bitcore-build": "^8.25.7",
     "brfs": "^2.0.1",
     "chai": "^4.2.0",
-    "gulp": "^4.0.2",
+    "gulp": "^4.0.0",
     "sinon": "^7.1.1"
   },
   "license": "MIT",
